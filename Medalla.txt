@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>James Medalla | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ff007a; /* Bright Pink */
+      --secondary: #4a90e2; /* Sky Blue */
+      --bg: #1e1e2f; /* Dark background */
+      --card-bg: #2c2c3e; /* Dark card background */
+      --text: #e1e1e6; /* Light text */
+      --muted: #777; /* Muted text */
+      --radius: 18px; /* Rounded corners */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 0 20px;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 120px 20px 60px;
+      text-align: center;
+      border-bottom-left-radius: var(--radius);
+      border-bottom-right-radius: var(--radius);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--secondary);
+      margin: 10px auto;
+      border-radius: 5px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: var(--radius);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      transform: perspective(1px) translateZ(0);
+      position: relative;
+      z-index: 0;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .contact a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 30px;
+      font-size: 1rem;
+      border-top-left-radius: var(--radius);
+      border-top-right-radius: var(--radius);
+      box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.4rem;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>James Michael Medalla</h1>
+    <p>4th Year BS Computer Science Student</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>
+      I’m a dedicated and goal-oriented 4th-year BS Computer Science student with a passion for building impactful digital experiences.
+    </p>
+    <p>
+      My journey has equipped me with strong programming, system design, and problem-solving skills, especially in full-stack development using technologies like React and Node.js.
+    </p>
+    <p>
+      I'm currently seeking internship or junior developer roles to apply my knowledge, gain real-world experience, and continue growing as a software engineer.
+    </p>
+  </section>
+
+  <section>
+    <h2>Educational Background</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Primary School</h3>
+        <p>Longos Elementary School</p>
+      </div>
+      <div class="card">
+        <h3>High School</h3>
+        <p>Bacoor National High School - Molino Main<br/>Bacoor National High School - Villa Maria</p>
+      </div>
+      <div class="card">
+        <h3>Senior High School</h3>
+        <p>University of Perpetual Help DALTA - Molino<br/>San Nicholas National High School</p>
+      </div>
+      <div class="card">
+        <h3>College</h3>
+        <p>University of Perpetual Help DALTA - Molino Campus</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Languages</h3>
+        <p>Python, Java, C++, JavaScript</p>
+      </div>
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>HTML, CSS, React, Node.js</p>
+      </div>
+      <div class="card">
+        <h3>Tools & Platforms</h3>
+        <p>Git, VS Code, Linux, MySQL</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Student Management System</h3>
+        <p>A Java desktop app to manage student records using a MySQL backend.</p>
+      </div>
+      <div class="card">
+        <h3>Personal Portfolio Website</h3>
+        <p>A responsive HTML/CSS/JS site for showcasing my projects and resume.</p>
+      </div>
+      <div class="card">
+        <h3>To-Do List App</h3>
+        <p>React + Firebase based task tracker with CRUD functionality and real-time updates.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>Email: <a href="mailto:jamesmedalla102106@gmail.com">jamesmedalla102106@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/jamesmedalla" target="_blank">github.com/jamesmedalla</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/jamesmichaelmedalla" target="_blank">linkedin.com/in/jamesmichaelmedalla</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 James Michael Medalla. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
